@@ -134,27 +134,14 @@ void score(struct pc you_pc) //оценка сборки
     int total_score = 0;
 
 
-    if (score_cpu > 4 && score_cpu <= 8)
-        total_score += 1;
-    else if (score_cpu > 8 && score_cpu <= 16)
-        total_score += 2;
-    else if (score_cpu > 16)
-        total_score += 3;
+    int cpu[3] = { 4, 8, 16 };
+    int gpu[3] = { 0, 5, 57 };
+    int ram[3] = { 12, 50, 105 };
 
-    if (score_gpu <= 5)
-        total_score += 1;
-    else if (score_gpu > 5 && score_gpu <= 57)
-        total_score += 2;
-    else if (score_gpu > 57)
-        total_score += 3;
+    total_score += scoring(cpu, score_cpu);
+    total_score += scoring(gpu, score_gpu);
+    total_score += scoring(ram, score_ram);
 
-    if (score_ram > 12 && score_ram <= 50)
-        total_score += 1;
-    else if (score_ram > 50 && score_ram <= 105)
-        total_score += 2;
-    else if (score_ram > 105)
-        total_score += 3;
-    
     if (total_score <= 2)
         printf("Это ОЧЕНЬ слабый ПК");
     else if (total_score > 2 && total_score < 6)
@@ -164,6 +151,17 @@ void score(struct pc you_pc) //оценка сборки
     else if (total_score >= 9)
         printf("Это мощнейший ПК");
     
+}
+
+int scoring(int numbers[3], double amount)
+{
+    if (amount > numbers[0] && amount <= numbers[1])
+        return 1;
+    else if (amount > numbers[1] && amount <= numbers[2])
+        return 2;
+    else if (amount > numbers[3])
+        return 3;
+    return 0;
 }
 
 
