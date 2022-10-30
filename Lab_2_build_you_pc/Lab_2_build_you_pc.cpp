@@ -118,7 +118,7 @@ void compatibility_check(struct pc you_pc) //проверка совместим
 
 void output(struct pc you_pc) //вывод 
 {
-	printf("\nМатеринская плата\n\t-модель: %s\n\t-сокет: %s\n\t-тип памяти: %s\n", you_pc.motherboard.model, you_pc.motherboard.soket, you_pc.motherboard.type_memory);
+	printf("Материнская плата\n\t-модель: %s\n\t-сокет: %s\n\t-тип памяти: %s\n", you_pc.motherboard.model, you_pc.motherboard.soket, you_pc.motherboard.type_memory);
 	printf("\nПроцессор\n\t-модель: %s\n\t-сокет: %s\n\t-кол-во ядер: %i\n\t-частота: %lf\n\t-энергопотребление: %i", you_pc.cpu.model, you_pc.cpu.soket, you_pc.cpu.amount_core, you_pc.cpu.clock_rate, you_pc.cpu.power);
 	printf("\nВидеокарта\n\t-модель: %s\n\t-частота: %i\n\t-пропускная способность памяти: %i\n\t-объём памяти: %i\n\t-энергопотребление: %i", you_pc.gpu.model, you_pc.gpu.clock_rate, you_pc.gpu.bandwidth, you_pc.gpu.memory_size, you_pc.gpu.power);
 	printf("\nОЗУ\n\t-модель: %s\n\t-тип памяти: %s\n\t-частота: %i\n\t-объём: %i", you_pc.ram.model, you_pc.ram.type_memory, you_pc.ram.clock_rate, you_pc.ram.memory_size);
