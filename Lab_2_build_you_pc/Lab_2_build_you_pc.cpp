@@ -76,7 +76,7 @@ void init(struct pc* you_pc) //инициализация структуры
 void input(struct pc* you_pc) //ввод данных
 {
 	setlocale(LC_ALL, "Rus");
-	printf("\nВведите модель, сокет и тип памяти мат. платы (через \"Enter\")");
+	printf("Введите модель, сокет и тип памяти мат. платы (через \"Enter\")");
 	scanf("%s", you_pc->motherboard.model);
 	scanf("%s", you_pc->motherboard.soket);
 	scanf("%s", you_pc->motherboard.type_memory);
