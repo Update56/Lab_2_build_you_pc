@@ -122,7 +122,7 @@ void output(struct pc you_pc) //вывод
 	printf("\nПроцессор\n\t-модель: %s\n\t-сокет: %s\n\t-кол-во ядер: %i\n\t-частота: %lf\n\t-энергопотребление: %i", you_pc.cpu.model, you_pc.cpu.soket, you_pc.cpu.amount_core, you_pc.cpu.clock_rate, you_pc.cpu.power);
 	printf("\nВидеокарта\n\t-модель: %s\n\t-частота: %i\n\t-пропускная способность памяти: %i\n\t-объём памяти: %i\n\t-энергопотребление: %i", you_pc.gpu.model, you_pc.gpu.clock_rate, you_pc.gpu.bandwidth, you_pc.gpu.memory_size, you_pc.gpu.power);
 	printf("\nОЗУ\n\t-модель: %s\n\t-тип памяти: %s\n\t-частота: %i\n\t-объём: %i", you_pc.ram.model, you_pc.ram.type_memory, you_pc.ram.clock_rate, you_pc.ram.memory_size);
-	printf("\nБлок питания:\n\t-модель%s\n\t-мощность: %i", you_pc.psu.model, you_pc.psu.power);
+	printf("\nБлок питания:\n\t-модель: %s\n\t-мощность: %i", you_pc.psu.model, you_pc.psu.power);
 }
 
 int scoring(int numbers[3], double amount) //фунция оценки
